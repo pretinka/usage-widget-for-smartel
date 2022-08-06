@@ -55,7 +55,7 @@ let encodeEUCKRtoURI = function (euckrStr) {
 
 let widget = new ListWidget();
 
-let uriname = encodeEUCKRtoURI(user_nm);
+// let uriname = encodeEUCKRtoURI(user_nm);
 
 //login to smartel
 let reqlogin = new Request(
@@ -70,8 +70,8 @@ reqlogin.body =
   "goUrl=" +
   "&hp_no=" +
   hp_no +
-  "&user_nm=" +
-  uriname +
+//   "&user_nm=" +
+//   uriname +
   "&pwd=" +
   encodeURIComponent(pwd);
 reqlogin.onRedirect = function (request) {
