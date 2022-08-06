@@ -72,7 +72,7 @@ reqlogin.body =
   hp_no +
 //   "&user_nm=" +
 //   uriname +
-  "&user_pw=" +
+  "&log_passwd=" +
   encodeURIComponent(pwd);
 reqlogin.onRedirect = function (request) {
   return null;
