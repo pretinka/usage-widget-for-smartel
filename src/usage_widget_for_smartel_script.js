@@ -59,20 +59,20 @@ let widget = new ListWidget();
 
 //login to smartel
 let reqlogin = new Request(
-  "https://www.smartelmobile.com:5009/mobile2/m_login_proc.asp"
+  "https://www.mysmartel.com/page/user_login.php"
 );
 reqlogin.method = "POST";
 reqlogin.headers = {
   "Content-Type": "application/x-www-form-urlencoded",
-  Origin: "https://www.smartelmobile.com:5009",
+  Origin: "https://www.mysmartel.com/page/user_login.php",
 };
 reqlogin.body =
   "goUrl=" +
-  "&hp_no=" +
+  "&hp=" +
   hp_no +
 //   "&user_nm=" +
 //   uriname +
-  "&pwd=" +
+  "&user_pw=" +
   encodeURIComponent(pwd);
 reqlogin.onRedirect = function (request) {
   return null;
@@ -81,7 +81,7 @@ let reslogin = await reqlogin.loadString();
 
 //load usage
 let req = new Request(
-  "https://www.smartelmobile.com:5009/mobile2/m_realTimePay_info_lg.asp"
+  "https://www.mysmartel.com/page/"
 );
 let res = await req.loadString();
 
