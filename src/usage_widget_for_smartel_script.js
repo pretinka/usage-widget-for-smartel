@@ -55,7 +55,7 @@ let encodeEUCKRtoURI = function (euckrStr) {
 
 let widget = new ListWidget();
 
-let uriname = encodeEUCKRtoURI(user_nm);
+// let uriname = encodeEUCKRtoURI(user_nm);
 
 //login to smartel
 let reqlogin = new Request(
@@ -70,8 +70,8 @@ reqlogin.body =
   "goUrl=" +
   "&hp_no=" +
   hp_no +
-  "&user_nm=" +
-  uriname +
+//   "&user_nm=" +
+//   uriname +
   "&pwd=" +
   encodeURIComponent(pwd);
 reqlogin.onRedirect = function (request) {
@@ -205,7 +205,7 @@ console.log(call);
 console.log(call_left);
 console.log(data);
 console.log(data_left);
-console.log("한글 인코딩 결과\n" + uriname);
+// console.log("한글 인코딩 결과\n" + uriname);
 console.log("로그인 정보\n" + reqlogin.body);
 console.log("로그인 결과\n" + reslogin);
 console.log("추출된 사용량\n" + usage);
